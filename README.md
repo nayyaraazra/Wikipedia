@@ -1,6 +1,6 @@
 # 🧭 Django Wiki Project
 
-A simple encyclopedia web application built with **Django** (Python) as part of *CS50’s Web Programming with Python and JavaScript*.  
+A simple encyclopedia web application built with **Django** (Python) as part of *CS50W’s Project Course*.  
 This project allows users to view, search, create, edit, and explore pages written in Markdown format.
 
 ---
@@ -16,3 +16,80 @@ This project allows users to view, search, create, edit, and explore pages writt
 ---
 ## 🗂️ Project Structure
 
+```
+wiki/
+├── encyclopedia/
+│ ├── static/encyclopedia/styles.css
+│ ├── templates/encyclopedia/
+│ │ ├── index.html
+│ │ ├── entry.html
+│ │ ├── new.html
+│ │ ├── edit.html
+│ │ ├── search.html
+│ │ └── notfound.html
+│ ├── urls.py
+│ ├── views.py
+│ ├── util.py
+│ ├── models.py
+│ └── init.py
+│
+├── entries/
+│ ├── Python.md
+│ ├── Git.md
+│ ├── Django.md
+│ ├── HTML.md
+│ ├── CSS.md
+│ └── Java.md
+│
+├── wiki/
+│ ├── settings.py
+│ ├── urls.py
+│ ├── asgi.py
+│ ├── wsgi.py
+│ └── init.py
+│
+├── manage.py
+└── README.md
+```
+
+## 🧩 How It Works
+- Entries are stored as .md (Markdown) files in the entries/ directory.
+- Django reads these files using helper functions in util.py.
+- The markdown2 library converts Markdown into HTML.
+- Templates handle displaying, editing, and creating entries through standard Django views.
+
+## 🧠 Concepts Used
+- Django URL routing
+- Views and templates
+- Template inheritance
+- Django forms and request handling (GET & POST)
+- Markdown rendering with markdown2
+- Basic session handling (optional for extended features)
+
+## ⚙️ Installation & Setup
+
+### 1. Clone this repository
+```bash
+git clone https://github.com/HiSpyWAre/Django-Wiki.git
+cd Django-Wiki
+```
+### 2. Create and activate a virtual environment
+```bash
+python -m venv venv
+venv\Scripts\activate   # on Windows
+# or
+source venv/bin/activate  # on macOS/Linux
+```
+### 3. Install dependencies
+``` bash
+pip install django markdown2
+```
+4. Run the development server
+```bash
+python manage.py runserver
+```
+## 📚 Credits
+
+This project is based on Project 1: Wiki from
+CS50’s Web Programming with Python and JavaScript
+.
