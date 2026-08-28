@@ -2,9 +2,9 @@
 {% block body %}
   <h1>Search results for "{{ query }}"</h1>
   {% if results %}
-    <ul>
+    <ul class="entry-grid">
       {% for r in results %}
-        <li><a href="{% url 'encyclopedia:entry' r %}">{{ r }}</a></li>
+        <li><a class="entry-card" href="{% url 'encyclopedia:entry' r %}">{{ r }}</a></li>
       {% endfor %}
     </ul>
   {% else %}

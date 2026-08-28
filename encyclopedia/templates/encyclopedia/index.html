@@ -8,9 +8,9 @@
 {% block body %}
     <h1>All Pages</h1>
 
-    <ul>
+    <ul class="entry-grid">
         {% for entry in entries %}
-            <li><a href="{% url 'encyclopedia:entry' entry %}">{{ entry }}</a></li>
+            <li><a class="entry-card" href="{% url 'encyclopedia:entry' entry %}">{{ entry }}</a></li>
         {% endfor %}
     </ul>
 
